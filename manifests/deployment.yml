@@ -2,7 +2,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: aws-example-octodex
+  name: aws-eks-gitops
   annotations:
     fluxcd.io/automated: "true"
 spec:
@@ -15,12 +15,12 @@ spec:
   template:
     metadata:
       labels:
-        app: aws-example-octodex
+        app: aws-eks-gitops
     spec:
       containers:
-      - name: aws-example-octodex
-        # image: 00000000000000.dkr.ecr.my-region.amazonaws.com/example-eks:tag
-        image: REGISTRY/IMAGE:TAG
+      - name: aws-eks-gitops
+        image: 202624756631.dkr.ecr.us-west-2.amazonaws.com/eks-gitops:tag
+        # image: REGISTRY/IMAGE:TAG
         ports:
         - containerPort: 5000
         resources:
