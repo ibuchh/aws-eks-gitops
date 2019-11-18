@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: aws-eks-gitops
-        image: 202624756631.dkr.ecr.us-west-2.amazonaws.com/eks-gitops:6b7e39883c5abd2264877c02b8cb1b0ca6933106
+        image: 202624756631.dkr.ecr.us-west-2.amazonaws.com/eks-gitops:1c6bfdf5d8c9b3912c88e83819ca7c93cfcc042f
         # image: REGISTRY/IMAGE:TAG
         ports:
         - containerPort: 5000
